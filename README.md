@@ -1,7 +1,5 @@
 # Windows 10 SDK Action
 
-[![Tests](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/tests.yml/badge.svg)](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/tests.yml)
-
 [![.github/workflows/main.yml](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/main.yml/badge.svg)](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/main.yml)
 
 [![Security Pipeline](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/security_pipeline.yml/badge.svg)](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/security_pipeline.yml)
