@@ -1572,14 +1572,14 @@ async function run() {
       },
     );
     if (resultCode !== 0) {
-      core.setFailed(`Script failed with result code ${resultCode}. ${output}`);
+      core.setFailed(`Action failed with result code ${resultCode}. ${output}`);
     }
   } catch (error) {
     core.setFailed(error.message);
   }
 }
 
-run().catch((e) => core.setFailed('Could not run setup-winsdk: ' + e.message));
+run().catch((e) => core.setFailed('Could not run action: ' + e.message));
 
 
 /***/ }),
