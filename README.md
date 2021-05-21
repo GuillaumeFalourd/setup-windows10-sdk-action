@@ -1,41 +1,36 @@
-# setup-winsdk
+# Windows 10 SDK Action
 
-[![ci][1]][2]
+[![Tests](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/tests.yml/badge.svg)](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/tests.yml)
 
-This action downloads and installs a specific version of the Windows 10 SDK.
+[![.github/workflows/main.yml](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/main.yml/badge.svg)](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/main.yml)
 
-## Inputs
+[![Security Pipeline](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/security_pipeline.yml/badge.svg)](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/security_pipeline.yml)
 
-### Optional
+Github action to download and install a specific version of the Windows 10 SDK.
 
-#### `winsdk-build-version`
+## How to use this action?
 
-The 5-digit version (build) of the SDK (`10.0.xxxxx.0`) to install. Examples:
-`17763`, `18362`, `19041`. Default `18362`.
+### Action input
 
-## Example usage
+Field | Mandatory | Observation
+------------ | ------------  | -------------
+**sdk-version** | YES | The 5-digit version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples:`17763`, `18362`, `19041`. Default `18362`._
+
+
+### Example
 
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: fbactions/setup-winsdk@v1
+- uses: GuillaumeFalourd/windows10-sdk-action@v1
   with:
-    winsdk-build-version: 19041
+    sdk-version: 18362
 ```
 
 ## Credits
 
-Big thanks to [Richard Murillo][3] who is the original author of the excellent
-PowerShell Windows SDK install script in the `externals` directory. While the
-script can be found in many repositories on GitHub, the earliest reference to
-it was traced back to [PR 2200][4] in the [WindowsCommunityToolkit][5] project.
+[Ritchard Murillo](https://github.com/rjmurillo) PowerShell Windows SDK install script.
 
-## License
+## Licensed
 
-The scripts and documentation in this project are released under the [MIT License](LICENSE)
-
-[1]: https://github.com/fbactions/setup-winsdk/workflows/ci/badge.svg
-[2]: https://github.com/fbactions/setup-winsdk/actions
-[3]: https://github.com/rjmurillo
-[4]: https://github.com/windows-toolkit/WindowsCommunityToolkit/pull/2220
-[5]: https://github.com/windows-toolkit/WindowsCommunityToolkit/
+This repository uses the [Apache License 2.0](https://github.com/GuillaumeFalourd/aws-cliaction/blob/main/LICENSE)
