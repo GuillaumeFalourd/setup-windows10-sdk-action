@@ -1540,7 +1540,7 @@ async function run() {
   }
 
   try {
-    const version = core.getInput('winsdk-build-version');
+    const version = core.getInput('sdk-version');
     core.info(`Installing Windows 10 SDK version 10.0.${version}.0`);
 
     let escapedScript = path
