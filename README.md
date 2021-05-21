@@ -14,17 +14,27 @@ Github action to download and install a specific version of the Windows 10 SDK.
 
 Field | Mandatory | Observation
 ------------ | ------------  | -------------
-**sdk-version** | YES | The 5-digit version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples:`17763`, `18362`, `19041`. Default `18362`._
+**sdk-version** | YES | The **5-digit** version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples:`17763`, `18362`, `19041`. Default `18362`._
 
 
 ### Example
+
+#### Default SDK version (18362)
+
+```yaml
+steps:
+- uses: actions/checkout@v2
+- uses: GuillaumeFalourd/windows10-sdk-action@v1
+```
+
+#### Specific SDK version (19041)
 
 ```yaml
 steps:
 - uses: actions/checkout@v2
 - uses: GuillaumeFalourd/windows10-sdk-action@v1
   with:
-    sdk-version: 18362
+    sdk-version: 19041
 ```
 
 ## Credits
