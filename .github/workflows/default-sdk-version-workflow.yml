@@ -1,0 +1,10 @@
+name: Default SDK version Workflow
+
+on: [push]
+
+jobs:
+  default-sdk-version:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: GuillaumeFalourd/setup-windows10-sdk-action@main
