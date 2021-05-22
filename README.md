@@ -39,12 +39,10 @@ steps:
     sdk-version: 19041
 ```
 
-You would then need to use `CMake` command to use the specific SDK.
+You would then need to use `CMake` command to use the specific SDK. Here are some references:
 
-Here are some references:
 - [CMAKE_SYSTEM_VERSION](https://cmake.org/cmake/help/latest/variable/CMAKE_SYSTEM_VERSION.html#variable:CMAKE_SYSTEM_VERSION)
 - [CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION](https://cmake.org/cmake/help/latest/variable/CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION.html#variable:CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION)
-
 
 ## Credits
 
