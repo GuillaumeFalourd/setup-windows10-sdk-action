@@ -18,7 +18,6 @@ Field | Mandatory | Observation
 ------------ | ------------  | -------------
 **sdk-version** | YES | The **5-digit** version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples:`17763`, `18362`, `19041`. Default `18362`._
 
-
 ### Example
 
 #### Default SDK version (18362)
