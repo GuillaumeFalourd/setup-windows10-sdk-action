@@ -1,4 +1,4 @@
-name: 'Windows 10 SDK Action'
+name: 'Setup Windows 10 SDK Action'
 
 description: 'Github action to download and install a specific version of the Windows 10 SDK'
 
