@@ -1,8 +1,8 @@
-# Windows 10 SDK Action
+# Setup windows 10 SDK Action
 
-[![.github/workflows/main.yml](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/main.yml/badge.svg)](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/main.yml)
+[![.github/workflows/main.yml](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/main.yml/badge.svg)](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/main.yml)
 
-[![Security Pipeline](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/security_pipeline.yml/badge.svg)](https://github.com/GuillaumeFalourd/windows10-sdk-action/actions/workflows/security_pipeline.yml)
+[![Security Pipeline](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/security_pipeline.yml/badge.svg)](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/security_pipeline.yml)
 
 Github action to download and install a specific version of the Windows 10 SDK.
 
@@ -22,7 +22,7 @@ Field | Mandatory | Observation
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: GuillaumeFalourd/windows10-sdk-action@v1
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1
 ```
 
 #### Specific SDK version (19041)
@@ -30,15 +30,15 @@ steps:
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: GuillaumeFalourd/windows10-sdk-action@v1
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1
   with:
     sdk-version: 19041
 ```
 
 ## Credits
 
-[Ritchard Murillo](https://github.com/rjmurillo) PowerShell Windows SDK install script.
-[fbactions unpublished action](https://github.com/fbactions/setup-winsdk)
+- [Ritchard Murillo](https://github.com/rjmurillo) PowerShell Windows SDK install script.
+- [fbactions unpublished action](https://github.com/fbactions/setup-winsdk)
 
 ## Licensed
 
