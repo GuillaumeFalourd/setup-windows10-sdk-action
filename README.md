@@ -49,7 +49,7 @@ Here are some references:
 ## Credits
 
 - [Ritchard Murillo](https://github.com/rjmurillo) PowerShell Windows SDK install script.
-- [fbactions unpublished action](https://github.com/fbactions/setup-winsdk)
+- [fbactions](https://github.com/fbactions/setup-winsdk) unpublished action.
 
 ## Licensed
 
