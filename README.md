@@ -1,4 +1,4 @@
-# Setup windows 10 SDK Action
+# Setup Windows 10 SDK Action
 
 [![.github/workflows/main.yml](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/main.yml/badge.svg)](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/main.yml)
 
