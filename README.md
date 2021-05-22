@@ -46,7 +46,7 @@ You would then need to use `CMake` command to use the specific SDK on your workf
 ## Credits
 
 - [Ritchard Murillo](https://github.com/rjmurillo) PowerShell Windows SDK install script.
-- [fbactions](https://github.com/fbactions/setup-winsdk) unpublished action.
+- [fbactions](https://github.com/fbactions/setup-winsdk) unpublished action (discovered trying to help with this [stackoverflow question](https://stackoverflow.com/questions/67643381/how-to-update-windows-sdk-on-windows-latest-on-github-action)) that wasn't available on the [Github Marketplace](https://github.com/marketplace?type=actions&query=setup+windows).
 
 ## Licensed
 
