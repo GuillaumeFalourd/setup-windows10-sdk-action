@@ -14,6 +14,8 @@ jobs:
       - name: Build new SDK
         shell: bash
         run: |
+          cd $GITHUB_WORKSPACE
           ls -a
+          pwd
           cmake -DCMAKE_SYSTEM_VERSION=10.0.19041.0 ..
           cmake --build .
