@@ -15,6 +15,5 @@ jobs:
         shell: bash
         run: |
           ls -a
-          cmake .. -DCMAKE_SYSTEM_VERSION=10.0.19041.0
-          cmake --build . --config Release
-          ctest -C Release
+          cmake -DCMAKE_SYSTEM_VERSION=10.0.19041.0 ..
+          cmake --build .
