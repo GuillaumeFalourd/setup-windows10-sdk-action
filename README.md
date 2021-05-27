@@ -40,9 +40,17 @@ steps:
 
 You would then need to use `CMake` command to use the specific SDK on your workflow. Here are some references:
 
+- [StackOverflow Question](https://stackoverflow.com/questions/67643381/how-to-update-windows-sdk-on-windows-latest-on-github-action?noredirect=1#comment119697001_67643381)
 - [CMAKE_SYSTEM_VERSION](https://cmake.org/cmake/help/latest/variable/CMAKE_SYSTEM_VERSION.html#variable:CMAKE_SYSTEM_VERSION)
 - [CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION](https://cmake.org/cmake/help/latest/variable/CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION.html#variable:CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION)
 
+``` yaml
+- name: Build new SDK
+  shell: bash
+  run: |
+     cmake ..-DCMAKE_SYSTEM_VERSION=10.0.{sdk-version}.0
+     cmake --build .
+```
 ## Credits
 
 - [Ritchard Murillo](https://github.com/rjmurillo) PowerShell Windows SDK install script.
