@@ -38,11 +38,7 @@ steps:
     sdk-version: 19041
 ```
 
-You would then need to use `CMake` command to use the specific SDK on your workflow. Here are some references:
-
-- [StackOverflow Question](https://stackoverflow.com/questions/67643381/how-to-update-windows-sdk-on-windows-latest-on-github-action?noredirect=1#comment119697001_67643381)
-- [CMAKE_SYSTEM_VERSION](https://cmake.org/cmake/help/latest/variable/CMAKE_SYSTEM_VERSION.html#variable:CMAKE_SYSTEM_VERSION)
-- [CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION](https://cmake.org/cmake/help/latest/variable/CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION.html#variable:CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION)
+You would then need to use `CMake` command to use the specific SDK on your workflow.
 
 ``` yaml
 - name: Build new SDK
@@ -51,6 +47,12 @@ You would then need to use `CMake` command to use the specific SDK on your workf
     cmake -DCMAKE_SYSTEM_VERSION=10.0.19041.0
     cmake --build .
 ```
+
+Here are some references for CMake:
+
+- [CMake Tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
+- [CMAKE_SYSTEM_VERSION](https://cmake.org/cmake/help/latest/variable/CMAKE_SYSTEM_VERSION.html#variable:CMAKE_SYSTEM_VERSION)
+- [CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION](https://cmake.org/cmake/help/latest/variable/CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION.html#variable:CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION)
 
 ## Credits
 
