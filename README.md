@@ -48,7 +48,7 @@ You would then need to use `CMake` command to use the specific SDK on your workf
 - name: Build new SDK
   shell: bash
   run: |
-     cmake ..-DCMAKE_SYSTEM_VERSION=10.0.{sdk-version}.0
+     cmake .. -DCMAKE_SYSTEM_VERSION=10.0.{sdk-version}.0
      cmake --build .
 ```
 ## Credits
