@@ -45,11 +45,11 @@ You would then need to use `CMake` command to use the specific SDK on your workf
 - [CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION](https://cmake.org/cmake/help/latest/variable/CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION.html#variable:CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION)
 
 ``` yaml
-- name: Build new SDK
-  shell: bash
-  run: |
-     cmake .. -DCMAKE_SYSTEM_VERSION=10.0.{sdk-version}.0
-     cmake --build .
+      - name: Build new SDK
+        shell: bash
+        run: |
+          cmake -DCMAKE_SYSTEM_VERSION=10.0.19041.0
+          cmake --build .
 ```
 ## Credits
 
