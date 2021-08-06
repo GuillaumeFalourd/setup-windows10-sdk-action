@@ -1,0 +1,20 @@
+name: 20348 SDK version Workflow
+
+# Related to issue: https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/issues/3
+
+on: [push]
+
+jobs:
+  specific-sdk-version:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: GuillaumeFalourd/setup-windows10-sdk-action@dev
+        with:
+          sdk-version: 20348
+
+      - name: Build new SDK
+        shell: bash
+        run: |
+          cmake -DCMAKE_SYSTEM_VERSION=10.0.19041.0
+          cmake --build .
