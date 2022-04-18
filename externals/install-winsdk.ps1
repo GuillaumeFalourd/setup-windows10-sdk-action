@@ -25,6 +25,10 @@ function Download-File {
 
     Write-Host -NoNewline "Downloading $downloadName..."
 
+    if ($buildNumber -eq "20348") {
+        $downloadUrl = "https://software-download.microsoft.com/download/sg/20348.1.210507-1500.fe_release_WindowsSDK.iso"
+    }
+
     try {
         $webclient = new-object System.Net.WebClient
         $webclient.DownloadFile($downloadUrl, $downloadPath)
