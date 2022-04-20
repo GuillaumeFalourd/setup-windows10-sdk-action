@@ -29,7 +29,7 @@ Field | Mandatory | Observation
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.3
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.4
 ```
 
 #### Specific SDK version (20348)
@@ -37,7 +37,7 @@ steps:
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.3
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.4
   with:
     sdk-version: 20348
 ```
