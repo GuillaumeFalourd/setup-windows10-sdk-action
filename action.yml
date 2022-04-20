@@ -5,7 +5,7 @@ description: 'Github action to download and install a specific version of the Wi
 inputs:
     sdk-version:
       description: 'SDK 5-digit version to install (e.g 17763, 18362, 19041)'
-      default: '18362'
+      default: '19041'
       required: true
 
 runs:
