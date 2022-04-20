@@ -10,6 +10,8 @@
 
 Github action to download and install a specific version of the Windows 10 SDK.
 
+_Supported versions: `17763`, `18362`, `19041`, `20348`._
+
 ## How to use this action?
 
 [![Public workflows that use this action.](https://img.shields.io/endpoint?url=https%3A%2F%2Fapi-endbug.vercel.app%2Fapi%2Fgithub-actions%2Fused-by%3Faction%3DGuillaumeFalourd%2Fsetup-windows10-sdk-action%26badge%3Dtrue)](https://github.com/search?o=desc&q=GuillaumeFalourd+setup-windows10-sdk-action+path%3A.github%2Fworkflows+language%3AYAML&s=&type=Code)
@@ -18,7 +20,7 @@ Github action to download and install a specific version of the Windows 10 SDK.
 
 Field | Mandatory | Observation
 ------------ | ------------  | -------------
-**sdk-version** | YES | The **5-digit** version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples:`17763`, `18362`, `19041`. Default `18362`._
+**sdk-version** | YES | The **5-digit** version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples:`17763`, `18362`, `19041`, `20348`. Default `18362`._
 
 ### Example
 
@@ -27,17 +29,17 @@ Field | Mandatory | Observation
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.3
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.4
 ```
 
-#### Specific SDK version (19041)
+#### Specific SDK version (20348)
 
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.3
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.4
   with:
-    sdk-version: 19041
+    sdk-version: 20348
 ```
 
 You would then need to use `CMake` command to use the specific SDK on your workflow.
@@ -46,7 +48,7 @@ You would then need to use `CMake` command to use the specific SDK on your workf
 - name: Build new SDK
   shell: bash
   run: |
-    cmake -DCMAKE_SYSTEM_VERSION=10.0.19041.0
+    cmake -DCMAKE_SYSTEM_VERSION=10.0.20348.0
     cmake --build .
 ```
 

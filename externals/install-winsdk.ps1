@@ -1,6 +1,7 @@
 [CmdletBinding()]
-param([Parameter(Mandatory = $true)]
-    [string]$buildNumber)
+param([Parameter(Mandatory=$true, Position=0)]
+      [string]$buildNumber,
+      [switch]$desktopCPP = $true)
 
 # Ensure the error action preference is set to the default for PowerShell3, 'Stop'
 $ErrorActionPreference = 'Stop'
@@ -14,6 +15,13 @@ $WindowsSDKInstalledRegPath = "$WindowsSDKRegPath\$WindowsSDKVersion\Installed O
 $StrongNameRegPath = "HKLM:\SOFTWARE\Microsoft\StrongName\Verification"
 $PublicKeyTokens = @("31bf3856ad364e35")
 
+if ($buildNumber -notmatch "^\d{5,}$")
+{
+    Write-Host "ERROR: '$buildNumber' doesn't look like a windows build number"
+    Write-Host
+    Exit 1
+}
+
 function Download-File {
     param ([string] $outDir,
         [string] $downloadUrl,
@@ -25,8 +33,20 @@ function Download-File {
 
     Write-Host -NoNewline "Downloading $downloadName..."
 
+    if ($buildNumber -eq "17763") {
+        $downloadURL = "https://software-download.microsoft.com/download/pr/17763.132.181022-1834.rs5_release_svc_prod1_WindowsSDK.iso"
+    }
+
+    if ($buildNumber -eq "18362") {
+        $downloadURL = "https://software-download.microsoft.com/download/pr/18362.1.190318-1202.19h1_release_WIndowsSDK.iso"
+    }
+
+    if ($buildNumber -eq "19041") {
+        $downloadURL = "https://software-download.microsoft.com/download/pr/19041.685.201201-2105.vb_release_svc_prod1_WindowsSDK.iso"
+    }
+
     if ($buildNumber -eq "20348") {
-        $downloadUrl = "https://software-download.microsoft.com/download/sg/20348.1.210507-1500.fe_release_WindowsSDK.iso"
+        $downloadUrl = "https://software-download.microsoft.com/download/pr/20348.1.210507-1500.fe_release_WindowsSDK.iso"
     }
 
     try {

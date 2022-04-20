@@ -3,7 +3,21 @@ name: Specific SDK version Workflow
 on: [push]
 
 jobs:
-  specific-sdk-version:
+  specific-sdk-version-17763:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: GuillaumeFalourd/setup-windows10-sdk-action@main
+        with:
+          sdk-version: 17763
+
+      - name: Build new SDK
+        shell: bash
+        run: |
+          cmake -DCMAKE_SYSTEM_VERSION=10.0.17763.0
+          cmake --build .
+
+  specific-sdk-version-19041:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2.3.4
@@ -17,7 +31,7 @@ jobs:
           cmake -DCMAKE_SYSTEM_VERSION=10.0.19041.0
           cmake --build .
 
-  20348-sdk-version:
+  specific-sdk-version-20348:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2.3.4
