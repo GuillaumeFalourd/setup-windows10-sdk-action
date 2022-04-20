@@ -22,7 +22,7 @@ Field | Mandatory | Observation
 
 ### Example
 
-#### Default SDK version (18362)
+#### Default SDK version (19041)
 
 ```yaml
 steps:
@@ -30,14 +30,14 @@ steps:
 - uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.3
 ```
 
-#### Specific SDK version (19041)
+#### Specific SDK version (20348)
 
 ```yaml
 steps:
 - uses: actions/checkout@v2
 - uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.3
   with:
-    sdk-version: 19041
+    sdk-version: 20348
 ```
 
 You would then need to use `CMake` command to use the specific SDK on your workflow.
@@ -46,7 +46,7 @@ You would then need to use `CMake` command to use the specific SDK on your workf
 - name: Build new SDK
   shell: bash
   run: |
-    cmake -DCMAKE_SYSTEM_VERSION=10.0.19041.0
+    cmake -DCMAKE_SYSTEM_VERSION=10.0.20348.0
     cmake --build .
 ```
 
