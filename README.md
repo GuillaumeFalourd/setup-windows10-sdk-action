@@ -10,7 +10,7 @@
 
 Github action to download and install a specific version of the Windows 10 SDK.
 
-_Supported versions: `17763`, `18362`, `19041`, `20348`._
+_Supported versions: `17763`, `18362`, `19041`, `20348`, `22000`._
 
 ## How to use this action?
 
@@ -20,7 +20,7 @@ _Supported versions: `17763`, `18362`, `19041`, `20348`._
 
 Field | Mandatory | Observation
 ------------ | ------------  | -------------
-**sdk-version** | YES | The **5-digit** version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples:`17763`, `18362`, `19041`, `20348`. Default `18362`._
+**sdk-version** | YES | The **5-digit** version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples:`17763`, `18362`, `19041`, `20348`, `22000`. Default `18362`._
 
 ### Example
 
@@ -29,7 +29,7 @@ Field | Mandatory | Observation
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.4
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.5
 ```
 
 #### Specific SDK version (20348)
@@ -37,7 +37,7 @@ steps:
 ```yaml
 steps:
 - uses: actions/checkout@v2
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.4
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.5
   with:
     sdk-version: 20348
 ```
