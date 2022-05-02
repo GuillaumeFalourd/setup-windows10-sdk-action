@@ -48,6 +48,10 @@ function Download-File {
     if ($buildNumber -eq "20348") {
         $downloadUrl = "https://software-download.microsoft.com/download/pr/20348.1.210507-1500.fe_release_WindowsSDK.iso"
     }
+    
+    if ($buildNumber -eq "22000") {
+        $downloadUrl = "https://software-static.download.prss.microsoft.com/pr/download/22000.194.210911-1543.co_release_svc_prod1_WindowsSDK.iso"
+    }
 
     try {
         $webclient = new-object System.Net.WebClient
