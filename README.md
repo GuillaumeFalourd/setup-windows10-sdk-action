@@ -28,16 +28,16 @@ Field | Mandatory | Observation
 
 ```yaml
 steps:
-- uses: actions/checkout@v2
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.5
+- uses: actions/checkout@v3
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.6
 ```
 
 #### Specific SDK version (20348)
 
 ```yaml
 steps:
-- uses: actions/checkout@v2
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.5
+- uses: actions/checkout@v3
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.6
   with:
     sdk-version: 20348
 ```
@@ -66,3 +66,13 @@ Here are some references for CMake:
 ## Licensed
 
 This repository uses the [Apache License 2.0](https://github.com/GuillaumeFalourd/aws-cliaction/blob/main/LICENSE)
+
+## 🤝 Contribution
+
+Would like to contribute to the repository? Here are the [guidelines](CONTRIBUTING.md) 🚀
+
+<a href="https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GuillaumeFalourd/setup-windows10-sdk-action" />
+</a>
+
+(Made with [contributors-img](https://contrib.rocks))
