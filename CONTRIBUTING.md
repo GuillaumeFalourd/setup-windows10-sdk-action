@@ -1,6 +1,6 @@
 # Contribution
 
-You're welcome to add useful actions to the repository
+You're welcome to contribute to the repository :rocket:
 
 ## New contents for the project
 
