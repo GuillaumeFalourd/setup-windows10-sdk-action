@@ -9,7 +9,7 @@ according to the following guide:
 
 ![branchs](/git-branchs.png)
 
-**Examples: `feature/new-action-name` or `fix/action-name`**
+**Examples: `feature/name or `fix/name`**
 
 ## Guidelines
 
