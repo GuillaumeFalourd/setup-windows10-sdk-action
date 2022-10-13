@@ -22,6 +22,8 @@ Field | Mandatory | Observation
 ------------ | ------------  | -------------
 **sdk-version** | YES | The **5-digit** version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples: `16299`, `17763`, `18362`, `19041`, `20348`, `22000`, `22621` (Default is `18362`)._
 
+_Obs: Want to add another sdk-version? [Contribute here!](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/blob/main/externals/install-winsdk.ps1)_
+
 ### Example
 
 #### Default SDK version (18362)
@@ -29,7 +31,7 @@ Field | Mandatory | Observation
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.7
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.8
 ```
 
 #### Specific SDK version (20348)
@@ -37,7 +39,7 @@ steps:
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.7
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.8
   with:
     sdk-version: 20348
 ```
