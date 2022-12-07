@@ -31,7 +31,7 @@ _Obs: Want to add another sdk-version? [Contribute here!](https://github.com/Gui
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.10
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.11
 ```
 
 #### Specific SDK version (20348)
@@ -39,7 +39,7 @@ steps:
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.10
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v1.11
   with:
     sdk-version: 20348
 ```
