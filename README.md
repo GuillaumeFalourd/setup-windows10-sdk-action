@@ -10,7 +10,7 @@
 
 Github action to download and install a specific version of the Windows 10 SDK.
 
-_Supported versions: `16299`, `17763`, `18362`, `19041`, `20348`, `22000`, `22621`._
+_Supported versions: `16299`, `17763`, `18362`, `19041`, `20348`, `22000`, `22621`, `26100`._
 
 ## How to use this action?
 
@@ -20,7 +20,7 @@ _Supported versions: `16299`, `17763`, `18362`, `19041`, `20348`, `22000`, `2262
 
 Field | Mandatory | Observation
 ------------ | ------------  | -------------
-**sdk-version** | YES | The **5-digit** version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples: `16299`, `17763`, `18362`, `19041`, `20348`, `22000`, `22621` (Default is `18362`)._
+**sdk-version** | YES | The **5-digit** version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples: `16299`, `17763`, `18362`, `19041`, `20348`, `22000`, `22621`, `26100` (Default is `18362`)._
 
 _Obs: Want to add another sdk-version? [Contribute here!](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/blob/main/externals/install-winsdk.ps1)_
 
