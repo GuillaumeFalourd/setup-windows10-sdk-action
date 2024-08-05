@@ -44,7 +44,7 @@ jobs:
         run: |
           cmake -DCMAKE_SYSTEM_VERSION=10.0.20348.0
           cmake --build .
-          
+
   specific-sdk-version-22000:
     runs-on: windows-latest
     steps:
@@ -59,3 +59,30 @@ jobs:
           cmake -DCMAKE_SYSTEM_VERSION=10.0.22000.0
           cmake --build .
 
+  specific-sdk-version-22621:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: GuillaumeFalourd/setup-windows10-sdk-action@main
+        with:
+          sdk-version: 22621
+
+      - name: Build new SDK
+        shell: bash
+        run: |
+          cmake -DCMAKE_SYSTEM_VERSION=10.0.22621.0
+          cmake --build .
+
+  specific-sdk-version-26100:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: GuillaumeFalourd/setup-windows10-sdk-action@main
+        with:
+          sdk-version: 26100
+
+      - name: Build new SDK
+        shell: bash
+        run: |
+          cmake -DCMAKE_SYSTEM_VERSION=10.0.26100.0
+          cmake --build .

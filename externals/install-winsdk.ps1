@@ -51,15 +51,19 @@ function Download-File {
     if ($buildNumber -eq "20348") {
         $downloadUrl = "https://software-download.microsoft.com/download/pr/20348.1.210507-1500.fe_release_WindowsSDK.iso"
     }
-    
+
     if ($buildNumber -eq "22000") {
         $downloadUrl = "https://software-static.download.prss.microsoft.com/pr/download/22000.194.210911-1543.co_release_svc_prod1_WindowsSDK.iso"
     }
-    
+
     if ($buildNumber -eq "22621") {
         $downloadUrl = "https://software-static.download.prss.microsoft.com/dbazure/888969d5-f34g-4e03-ac9d-1f9786c66749/22621.1.220506-1250.ni_release_WindowsSDK.iso"
     }
-    
+
+    if ($buildNumber -eq "26100") {
+        $downloadUrl = "https://software-static.download.prss.microsoft.com/dbazure/888969d5-f34g-4e03-ac9d-1f9786c66749/26100.1.240331-1435.ge_release_WindowsSDK.iso"
+    }
+
     try {
         $webclient = new-object System.Net.WebClient
         $webclient.DownloadFile($downloadUrl, $downloadPath)
