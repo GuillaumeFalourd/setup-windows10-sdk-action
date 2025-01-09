@@ -2,7 +2,9 @@
 
 [![.github/workflows/default-sdk-version-workflow.yml](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/default-sdk-version-workflow.yml/badge.svg)](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/default-sdk-version-workflow.yml)
 
-[![.github/workflows/specific-sdk-version-workflow.yml](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/specific-sdk-version-workflow.yml/badge.svg)](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/specific-sdk-version-workflow.yml) (26100 returns an error)
+[![.github/workflows/specific-sdk-version-workflow.yml](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/specific-sdk-version-workflow.yml/badge.svg)](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/specific-sdk-version-workflow.yml)
+- 18362 link is broken
+- 19041 link is broken
 
 [![Security Pipeline](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/security_pipeline.yml/badge.svg)](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/security_pipeline.yml)
 
@@ -10,7 +12,7 @@
 
 Github action to download and install a specific version of the Windows 10 SDK.
 
-_Supported versions: `16299`, `17763`, `18362`, `19041`, `20348`, `22000`, `22621`, `26100` (bug opened)._
+_Supported versions: `16299`, `17763`, `18362`, `19041`, `20348`, `22000`, `22621`, `26100`._
 
 ## How to use this action?
 
@@ -20,28 +22,30 @@ _Supported versions: `16299`, `17763`, `18362`, `19041`, `20348`, `22000`, `2262
 
 Field | Mandatory | Observation
 ------------ | ------------  | -------------
-**sdk-version** | YES | The **5-digit** version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples: `16299`, `17763`, `18362`, `19041`, `20348`, `22000`, `22621`, `26100` (Default is `18362`)._
+**sdk-version** | YES | The **5-digit** version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples: `16299`, `17763`, `18362`, `19041`, `20348`, `22000`, `22621`, `26100` (Default is `20348`)._
+
+SDK links can be found here: https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/
 
 _Obs: Want to add another sdk-version? [Contribute here!](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/blob/main/externals/install-winsdk.ps1)_
 
 ### Example
 
-#### Default SDK version (18362)
+#### Default SDK version (20348)
 
 ```yaml
 steps:
 - uses: actions/checkout@v4
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v2
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v2.4
 ```
 
-#### Specific SDK version (20348)
+#### Specific SDK version (22000)
 
 ```yaml
 steps:
 - uses: actions/checkout@v4
-- uses: GuillaumeFalourd/setup-windows10-sdk-action@v2
+- uses: GuillaumeFalourd/setup-windows10-sdk-action@v2.4
   with:
-    sdk-version: 20348
+    sdk-version: 22000
 ```
 
 You would then need to use `CMake` command to use the specific SDK on your workflow.
