@@ -8,9 +8,7 @@ Warnings:
 - `18362` and `19041` official download links are broken (404). Feel free to contribute if you find new links!
 - `16299` download link works, but the package doesn't build anymore. Feel free to contribute if you find a working package for this SDK version!
 
-PS: Other SDK versions work as expected.
-
-[![Security Pipeline](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/security_pipeline.yml/badge.svg)](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/security_pipeline.yml)
+_PS: It may seems a lot, but other SDK versions work as expected._
 
 ![title](https://user-images.githubusercontent.com/22433243/119227643-4d2cf080-bae5-11eb-890b-4e73d7c48d39.png)
 
