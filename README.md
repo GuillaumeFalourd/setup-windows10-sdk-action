@@ -6,7 +6,7 @@
 
 Warnings: 
 - `18362` official download link is broken (404). Feel free to contribute if you find new links!
-- `16299` download link works, but the package doesn't build anymore. Feel free to contribute if you find a working package for this SDK version!
+- `16299` and `19041` download link works, but the package doesn't build anymore. Feel free to contribute if you find a working package for this SDK version!
 
 _PS: It may seems a lot, but other SDK versions work as expected._
 
