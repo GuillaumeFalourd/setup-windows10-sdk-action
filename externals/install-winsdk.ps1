@@ -45,7 +45,7 @@ function Download-File {
     }
 
     if ($buildNumber -eq "19041") {
-        $downloadURL = "https://go.microsoft.com/fwlink/?linkid=2120735"
+        $downloadURL = "https://go.microsoft.com/fwlink/?linkid=2120843"
     }
 
     if ($buildNumber -eq "20348") {
