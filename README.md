@@ -5,7 +5,7 @@
 [![.github/workflows/specific-sdk-version-workflow.yml](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/specific-sdk-version-workflow.yml/badge.svg)](https://github.com/GuillaumeFalourd/setup-windows10-sdk-action/actions/workflows/specific-sdk-version-workflow.yml) 
 
 Warnings: 
-- `18362` and `19041` official download links are broken (404). Feel free to contribute if you find new links!
+- `18362` official download link is broken (404). Feel free to contribute if you find new links!
 - `16299` download link works, but the package doesn't build anymore. Feel free to contribute if you find a working package for this SDK version!
 
 _PS: It may seems a lot, but other SDK versions work as expected._
