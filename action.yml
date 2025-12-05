@@ -7,6 +7,10 @@ inputs:
       description: 'SDK 5-digit version to install (e.g 17763, 18362, 19041, 20348, 22000, 22621, 26100)'
       default: '20348'
       required: true
+    install-args:
+      description: 'Optional custom arguments to pass to the WinSDKSetup.exe installer (e.g. "/features OptionId.UWPCpp OptionId.DesktopCpp /q")'
+      default: ''
+      required: false
 
 runs:
   using: 'node20'

@@ -1,7 +1,9 @@
 [CmdletBinding()]
 param([Parameter(Mandatory=$true, Position=0)]
       [string]$buildNumber,
-      [switch]$desktopCPP = $true)
+      [switch]$desktopCPP = $true,
+      [Parameter(Mandatory=$false)]
+      [string]$InstallArgs = "")
 
 # Ensure the error action preference is set to the default for PowerShell3, 'Stop'
 $ErrorActionPreference = 'Stop'
@@ -270,7 +272,11 @@ if ($InstallWindowsSDK) {
             Write-Host -NoNewLine "Installing WinSDK..."
 
             $setupPath = Join-Path "$isoDrive" "WinSDKSetup.exe"
-            Start-Process -Wait $setupPath "/features $WindowsSDKOptions /q"
+            $args = "/features $WindowsSDKOptions /q"
+            if ($InstallArgs) {
+                $args = "$InstallArgs $args"
+            }
+            Start-Process -Wait $setupPath $args
             Write-Host "Done"
         }
         else {
