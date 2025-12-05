@@ -25,7 +25,7 @@ _Supported versions: `16299`, `17763`, `18362`, `19041`, `20348`, `22000`, `2262
 Field | Mandatory | Observation
 ------------ | ------------  | -------------
 **sdk-version** | YES | The **5-digit** version (build) of the SDK (`10.0.xxxxx.0`) to install <br/> _Examples: `16299`, `17763`, `18362`, `19041`, `20348`, `22000`, `22621`, `26100` (Default is `20348`)._
-**install-args** | NO | Optional custom arguments to pass to `WinSDKSetup.exe` installer. <br/> _Example: `/features OptionId.UWPCpp OptionId.DesktopCpp OptionId.NetRuntimeDebuggers /q` for ARM64 builds_
+**install-args** | NO | Optional custom arguments to pass to `WinSDKSetup.exe` installer. <br/> _Example: `OptionId.UWPCpp OptionId.DesktopCpp OptionId.NetRuntimeDebuggers` for ARM64 builds_
 
 SDK links can be found here: https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/
 
