@@ -272,10 +272,7 @@ if ($InstallWindowsSDK) {
             Write-Host -NoNewLine "Installing WinSDK..."
 
             $setupPath = Join-Path "$isoDrive" "WinSDKSetup.exe"
-            $args = "/features $WindowsSDKOptions /q"
-            if ($InstallArgs) {
-                $args = "$InstallArgs $args"
-            }
+            $args = "/features $InstallArgs $WindowsSDKOptions /q"
             Start-Process -Wait $setupPath $args
             Write-Host "Done"
         }

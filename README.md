@@ -59,7 +59,7 @@ steps:
 - uses: GuillaumeFalourd/setup-windows10-sdk-action@v2.4
   with:
     sdk-version: 26100
-    install-args: '/features OptionId.UWPCpp OptionId.DesktopCpp OptionId.NetRuntimeDebuggers /q'
+    install-args: 'OptionId.UWPCpp OptionId.DesktopCpp OptionId.NetRuntimeDebuggers'
 ```
 
 You would then need to use `CMake` command to use the specific SDK on your workflow.
