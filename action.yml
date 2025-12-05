@@ -8,7 +8,7 @@ inputs:
       default: '20348'
       required: true
     install-args:
-      description: 'Optional custom arguments to pass to the WinSDKSetup.exe installer (e.g. "/features OptionId.UWPCpp OptionId.DesktopCpp /q")'
+      description: 'Optional custom arguments to pass to the WinSDKSetup.exe installer (e.g. "OptionId.UWPCpp OptionId.DesktopCpp")'
       default: ''
       required: false
 
