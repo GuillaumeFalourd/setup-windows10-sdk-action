@@ -11,12 +11,13 @@ async function run() {
 
   try {
     const version = core.getInput('sdk-version');
+    const installArgs = core.getInput('install-args');
     core.info("Installing Windows 10 SDK version 10.0.${version}.0");
 
     let escapedScript = path
       .join(__dirname, '..', 'externals', 'install-winsdk.ps1')
       .replace(/'/g, "''");
-    let command = `& '${escapedScript}' ${version}`;
+    let command = `& '${escapedScript}' ${version}${installArgs ? ` -InstallArgs "${installArgs}"` : ''}`;
 
     let output = '';
     let resultCode = 0;
